@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagly — Planilla Inteligente para Panamá</title>
+  <meta name="description" content="Automatiza tu planilla con cálculos exactos de CSS, Seguro Educativo e ISR. Diseñado para empresas panameñas.">
+  <meta name="theme-color" content="#0a1929">
+  <meta property="og:title" content="Pagly — Planilla Inteligente para Panamá">
+  <meta property="og:description" content="Calcula CSS, Seguro Educativo, ISR y décimo automáticamente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pagly.io">
+  <link rel="canonical" href="https://pagly.io">
+  <link rel="icon" type="image/svg+xml" href="/assets/pagly-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="Pagly inicio">
+        <img src="assets/pagly-logo-dark.svg" alt="Pagly" height="36">
+      </a>
+      <div class="nav-links">
+        <a href="#funciones">Funciones</a>
+        <a href="#planes">Planes</a>
+        <a href="#cumplimiento">Cumplimiento</a>
+        <a href="https://app.pagly.io/login" class="nav-cta">Iniciar Sesión</a>
+      </div>
+      <button class="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#funciones">Funciones</a>
+    <a href="#planes">Planes</a>
+    <a href="#cumplimiento">Cumplimiento</a>
+    <a href="https://app.pagly.io/login" class="nav-cta">Iniciar Sesión</a>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span>🟢</span> Diseñado para Panamá
+        </div>
+        <h1 class="reveal reveal-d1">Tu planilla, sin complicaciones.</h1>
+        <p class="reveal reveal-d2">Pagly calcula CSS, Seguro Educativo, ISR y décimo tercer mes automáticamente. Olvídate de hojas de cálculo y enfócate en hacer crecer tu empresa.</p>
+        <div class="hero-ctas reveal reveal-d3">
+          <a href="https://app.pagly.io/register" class="btn btn-primary">Comenzar gratis</a>
+          <a href="#demo" class="btn btn-secondary">Ver demostración</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SOCIAL PROOF ====== -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <h3>100%</h3>
+          <p>Cumplimiento CSS/DGI</p>
+        </div>
+        <div class="stat-item reveal reveal-d1">
+          <h3>&lt; 30s</h3>
+          <p>Calcular planilla</p>
+        </div>
+        <div class="stat-item reveal reveal-d2">
+          <h3>0</h3>
+          <p>Errores de cálculo</p>
+        </div>
+        <div class="stat-item reveal reveal-d3">
+          <h3>24/7</h3>
+          <p>Acceso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="section" id="funciones">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Todo lo que necesitas para tu planilla</h2>
+        <p>Desde cálculos automáticos hasta reportes oficiales, Pagly maneja cada detalle de la gestión de nómina.</p>
+      </div>
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <h3>Cálculos Automáticos</h3>
+          <p>CSS 9.75% + 12.25%, Seguro Educativo 1.25% + 1.50%, ISR por tramos. Todo calculado al centavo.</p>
+          <span class="feature-tag">Ley 462</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-icon">👥</div>
+          <h3>Gestión de Empleados</h3>
+          <p>Departamentos, posiciones, historial completo de cada colaborador en un solo lugar.</p>
+          <span class="feature-tag">Automatizado</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-icon">📄</div>
+          <h3>Reportes Oficiales</h3>
+          <p>Genera reportes CSS, SE, ISR y planilla detallada en formato PDF y Excel listos para presentar.</p>
+          <span class="feature-tag">Formato oficial</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="feature-card reveal reveal-d3">
+          <div class="feature-icon">⏱️</div>
+          <h3>Horas Extra y Ausencias</h3>
+          <p>Recargo del 25% diurnas, 50% nocturnas, control de vacaciones según el Código Laboral.</p>
+          <span class="feature-tag">Código Laboral</span>
+        </div>
+        <!-- Card 5 -->
+        <div class="feature-card reveal reveal-d4">
+          <div class="feature-icon">💰</div>
+          <h3>Préstamos y Deducciones</h3>
+          <p>Cuotas automáticas, anticipos de salario y deducciones personalizadas con seguimiento completo.</p>
+          <span class="feature-tag">Automatizado</span>
+        </div>
+        <!-- Card 6 -->
+        <div class="feature-card reveal reveal-d5">
+          <div class="feature-icon">🏢</div>
+          <h3>Multi-Empresa Seguro</h3>
+          <p>Aislamiento total de datos entre empresas, roles y permisos granulares por usuario.</p>
+          <span class="feature-tag">Aislamiento total</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CALCULATOR DEMO ====== -->
+  <section class="calc-section section" id="demo">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Mira cómo funciona</h2>
+        <p>Ejemplo real de una colilla de pago generada por Pagly en segundos.</p>
+      </div>
+      <div class="calc-wrapper reveal">
+        <div class="calc-card">
+          <div class="calc-inner">
+            <div class="calc-header">
+              <h3>Colilla de Pago</h3>
+              <span class="calc-period font-mono">Ene 2026</span>
+            </div>
+            <div class="calc-row">
+              <span>Salario Base</span>
+              <span class="font-mono">B/. 2,500.00</span>
+            </div>
+            <div class="calc-row add">
+              <span>Horas Extra (3h diurnas × 1.25)</span>
+              <span class="font-mono">+ B/. 39.06</span>
+            </div>
+            <hr class="calc-divider">
+            <div class="calc-row sub">
+              <span>CSS Empleado (9.75%)</span>
+              <span class="font-mono">- B/. 247.56</span>
+            </div>
+            <div class="calc-row sub">
+              <span>Seguro Educativo (1.25%)</span>
+              <span class="font-mono">- B/. 31.74</span>
+            </div>
+            <div class="calc-row sub">
+              <span>ISR</span>
+              <span class="font-mono">- B/. 45.83</span>
+            </div>
+            <div class="calc-row sub">
+              <span>Préstamo (cuota 6/12)</span>
+              <span class="font-mono">- B/. 83.33</span>
+            </div>
+            <hr class="calc-divider">
+            <div class="calc-total">
+              <span>Neto a Pagar</span>
+              <span class="font-mono">B/. 2,130.60</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRICING ====== -->
+  <section class="section" id="planes">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Planes para cada empresa</h2>
+        <p>Desde emprendedores hasta corporaciones, hay un plan Pagly para ti.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Free -->
+        <div class="pricing-card reveal">
+          <h3>Free</h3>
+          <div class="pricing-price">
+            <span class="amount">B/. 0</span>
+          </div>
+          <ul class="pricing-features">
+            <li>5 empleados</li>
+            <li>Cálculos básicos</li>
+            <li>1 usuario</li>
+          </ul>
+          <a href="https://app.pagly.io/register" class="pricing-btn">Comenzar gratis</a>
+        </div>
+        <!-- Starter -->
+        <div class="pricing-card popular reveal reveal-d1">
+          <span class="popular-badge">POPULAR</span>
+          <h3>Starter</h3>
+          <div class="pricing-price">
+            <span class="amount">B/. 29</span>
+            <span class="period">/mes</span>
+          </div>
+          <ul class="pricing-features">
+            <li>25 empleados</li>
+            <li>3 usuarios</li>
+            <li>Exportar a Excel</li>
+            <li>Horas extra</li>
+          </ul>
+          <a href="https://app.pagly.io/register" class="pricing-btn">Comenzar ahora</a>
+        </div>
+        <!-- Professional -->
+        <div class="pricing-card reveal reveal-d2">
+          <h3>Professional</h3>
+          <div class="pricing-price">
+            <span class="amount">B/. 79</span>
+            <span class="period">/mes</span>
+          </div>
+          <ul class="pricing-features">
+            <li>100 empleados</li>
+            <li>Usuarios ilimitados</li>
+            <li>PDF + Excel</li>
+            <li>Préstamos</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a href="https://app.pagly.io/register" class="pricing-btn">Comenzar ahora</a>
+        </div>
+        <!-- Enterprise -->
+        <div class="pricing-card reveal reveal-d3">
+          <h3>Enterprise</h3>
+          <div class="pricing-price">
+            <span class="amount">Custom</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Empleados ilimitados</li>
+            <li>API dedicada</li>
+            <li>Multi-sucursal</li>
+            <li>SLA garantizado</li>
+            <li>Onboarding personalizado</li>
+          </ul>
+          <a href="mailto:ventas@pagly.io" class="pricing-btn">Contactar ventas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== COMPLIANCE ====== -->
+  <section class="compliance section" id="cumplimiento">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Hecho para la ley laboral panameña</h2>
+        <p>Cada cálculo sigue la legislación vigente. Siempre actualizado, siempre en cumplimiento.</p>
+      </div>
+      <div class="compliance-badges reveal">
+        <span class="compliance-badge">Ley 462</span>
+        <span class="compliance-badge">CSS</span>
+        <span class="compliance-badge">DGI</span>
+        <span class="compliance-badge">MITRADEL</span>
+        <span class="compliance-badge">Seguro Educativo</span>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card reveal">
+          <div class="rate font-mono">9.75%</div>
+          <div class="rate-label">CSS Empleado</div>
+        </div>
+        <div class="rate-card reveal reveal-d1">
+          <div class="rate font-mono">12.25%</div>
+          <div class="rate-label">CSS Patronal</div>
+        </div>
+        <div class="rate-card reveal reveal-d2">
+          <div class="rate font-mono">1.25%</div>
+          <div class="rate-label">SE Empleado</div>
+        </div>
+        <div class="rate-card reveal reveal-d3">
+          <div class="rate font-mono">1.50%</div>
+          <div class="rate-label">SE Patronal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA FINAL ====== -->
+  <section class="cta-final section">
+    <div class="container">
+      <h2 class="reveal">¿Listo para simplificar tu planilla?</h2>
+      <p class="reveal reveal-d1">Únete a las empresas panameñas que ya confían en Pagly.</p>
+      <div class="reveal reveal-d2">
+        <a href="https://app.pagly.io/register" class="btn btn-primary">Crear cuenta gratis</a>
+        <p class="cta-note">Sin tarjeta de crédito</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="footer-logo" aria-label="Pagly">
+        <img src="assets/pagly-logo-dark.svg" alt="Pagly" height="28">
+      </a>
+      <div class="footer-links">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="mailto:soporte@pagly.io">Soporte</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 Pagly. Hecho en Panamá 🇵🇦</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

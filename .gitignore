@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+
+# Build / deploy
+deploy.tar
+dist/
+build/
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

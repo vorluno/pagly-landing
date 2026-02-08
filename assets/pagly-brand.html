@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagly — Brand Identity Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Primary - Emerald Green (growth, money, trust) */
+    --primary-50: #ecfdf5;
+    --primary-100: #d1fae5;
+    --primary-200: #a7f3d0;
+    --primary-300: #6ee7b7;
+    --primary-400: #34d399;
+    --primary-500: #10b981;
+    --primary-600: #059669;
+    --primary-700: #047857;
+    --primary-800: #065f46;
+    --primary-900: #064e3b;
+
+    /* Accent - Electric Teal */
+    --accent-400: #2dd4bf;
+    --accent-500: #14b8a6;
+    --accent-600: #0d9488;
+
+    /* Navy - Trust & Authority */
+    --navy-50: #f0f4f8;
+    --navy-100: #d9e2ec;
+    --navy-200: #bcccdc;
+    --navy-300: #9fb3c8;
+    --navy-400: #829ab1;
+    --navy-500: #627d98;
+    --navy-600: #486581;
+    --navy-700: #334e68;
+    --navy-800: #243b53;
+    --navy-900: #102a43;
+    --navy-950: #0a1929;
+
+    /* Semantic */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* Neutrals */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy-950);
+    color: var(--gray-100);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 30% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(45, 212, 191, 0.08) 0%, transparent 50%),
+                var(--navy-950);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 49px,
+      rgba(16, 185, 129, 0.03) 50px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 49px,
+      rgba(16, 185, 129, 0.03) 50px
+    );
+    animation: gridMove 20s linear infinite;
+  }
+
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeUp 1s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo-main {
+    margin-bottom: 2rem;
+  }
+
+  .logo-main svg {
+    width: 320px;
+    height: auto;
+  }
+
+  .hero-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.25rem;
+    color: var(--gray-400);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--primary-400);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-500);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--navy-700), transparent);
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  /* ===== LOGO SECTION ===== */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .logo-card {
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .logo-card.dark {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+  }
+
+  .logo-card.light {
+    background: #ffffff;
+  }
+
+  .logo-card.gradient {
+    background: linear-gradient(135deg, var(--primary-600) 0%, var(--accent-600) 100%);
+  }
+
+  .logo-card.mono {
+    background: var(--gray-100);
+  }
+
+  .logo-card-label {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .logo-card.dark .logo-card-label { color: var(--gray-400); }
+  .logo-card.light .logo-card-label { color: var(--gray-500); }
+  .logo-card.gradient .logo-card-label { color: rgba(255,255,255,0.7); }
+  .logo-card.mono .logo-card-label { color: var(--gray-500); }
+
+  .logo-card svg {
+    width: 200px;
+    height: auto;
+  }
+
+  /* ===== COLORS ===== */
+  .color-section {
+    margin-bottom: 3rem;
+  }
+
+  .color-section h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gray-200);
+    margin-bottom: 1rem;
+  }
+
+  .color-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .color-chip {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+    transition: transform 0.2s ease;
+  }
+
+  .color-chip:hover {
+    transform: scale(1.05);
+  }
+
+  .color-swatch {
+    height: 80px;
+    width: 100%;
+  }
+
+  .color-info {
+    padding: 0.75rem;
+  }
+
+  .color-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-200);
+    margin-bottom: 0.25rem;
+  }
+
+  .color-hex {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-500);
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  .type-specimens {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .type-specimen {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .type-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .type-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background: var(--navy-800);
+    color: var(--primary-400);
+    border: 1px solid var(--navy-700);
+  }
+
+  .type-sample {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .type-sample.display {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .type-sample.body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .type-sample.mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--primary-400);
+    line-height: 1.8;
+  }
+
+  .type-note {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-top: 1rem;
+  }
+
+  /* ===== ICON MARK ===== */
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+  }
+
+  .icon-card {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .icon-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-600);
+  }
+
+  .icon-card svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .icon-card span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-500);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ===== MOCKUP ===== */
+  .mockup-container {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  }
+
+  .mockup-toolbar {
+    height: 40px;
+    background: var(--navy-800);
+    border-bottom: 1px solid var(--navy-700);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+
+  .toolbar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .toolbar-dot.red { background: #ff5f57; }
+  .toolbar-dot.yellow { background: #febc2e; }
+  .toolbar-dot.green { background: #28c840; }
+
+  .toolbar-url {
+    flex: 1;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-500);
+  }
+
+  .mockup-body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 500px;
+  }
+
+  .mockup-sidebar {
+    background: var(--navy-950);
+    border-right: 1px solid var(--navy-700);
+    padding: 1.5rem;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--navy-800);
+  }
+
+  .sidebar-logo svg { width: 28px; height: 28px; }
+  .sidebar-logo span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .sidebar-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+
+  .nav-item {
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: default;
+    transition: all 0.15s ease;
+  }
+
+  .nav-item.active {
+    background: var(--primary-600);
+    color: white;
+    font-weight: 500;
+  }
+
+  .nav-item:not(.active):hover {
+    background: var(--navy-800);
+    color: var(--gray-200);
+  }
+
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+  }
+
+  .nav-item.active .nav-icon { opacity: 1; }
+
+  .mockup-main {
+    padding: 2rem;
+    background: var(--navy-900);
+  }
+
+  .mockup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .mockup-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .mockup-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-600);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: default;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: var(--navy-800);
+    border: 1px solid var(--navy-700);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .stat-change {
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+  }
+
+  .stat-change.up { color: var(--primary-400); }
+  .stat-change.down { color: var(--error); }
+
+  .mock-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .mock-table th {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--navy-700);
+  }
+
+  .mock-table td {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--navy-800);
+    color: var(--gray-300);
+  }
+
+  .mock-table tr:last-child td { border-bottom: none; }
+
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .badge.success { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+  .badge.warning { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+  .badge.info { background: rgba(59, 130, 246, 0.15); color: var(--info); }
+
+  /* ===== USAGE RULES ===== */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .rule-card {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-700);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .rule-card.do { border-left: 3px solid var(--success); }
+  .rule-card.dont { border-left: 3px solid var(--error); }
+
+  .rule-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .rule-card.do .rule-label { color: var(--success); }
+  .rule-card.dont .rule-label { color: var(--error); }
+
+  .rule-card p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+  }
+
+  /* ===== FOOTER ===== */
+  .brand-footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--gray-600);
+    font-size: 0.85rem;
+  }
+
+  .brand-footer a {
+    color: var(--primary-500);
+    text-decoration: none;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .section-title { font-size: 1.8rem; }
+    .type-sample.display { font-size: 2.2rem; }
+    .mockup-body { grid-template-columns: 1fr; }
+    .mockup-sidebar { display: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .logo-main svg { width: 240px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="logo-main">
+      <!-- LOGO PRINCIPAL: Pagly -->
+      <svg viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Icon mark -->
+        <rect x="0" y="12" width="56" height="56" rx="14" fill="url(#logoGrad)"/>
+        <path d="M18 40 L26 32 L38 44 L26 48 Z" fill="white" opacity="0.9"/>
+        <path d="M26 32 L38 28 L38 44 L26 32 Z" fill="white" opacity="0.6"/>
+        <circle cx="38" cy="36" r="4" fill="white" opacity="0.4"/>
+
+        <!-- Wordmark -->
+        <text x="72" y="55" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="46" fill="white" letter-spacing="-1">Pagly</text>
+
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="12" x2="56" y2="68" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#10b981"/>
+            <stop offset="100%" stop-color="#0d9488"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <p class="hero-tagline">Brand Identity Guide</p>
+    <p class="hero-sub">Planilla inteligente para Panamá</p>
+  </div>
+  <div class="scroll-hint">↓ Scroll para explorar</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== LOGO VARIATIONS ==================== -->
+<section>
+  <span class="section-label">01 — Logotipo</span>
+  <h2 class="section-title">Variaciones del Logo</h2>
+  <p class="section-desc">El logo de Pagly combina un ícono abstracto que evoca crecimiento financiero con un wordmark moderno en Space Grotesk. Cuatro variaciones para diferentes contextos.</p>
+
+  <div class="logo-grid">
+    <!-- Dark bg -->
+    <div class="logo-card dark">
+      <svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="6" width="48" height="48" rx="12" fill="url(#g1)"/>
+        <path d="M15 30 L22 23 L32 33 L22 37 Z" fill="white" opacity="0.9"/>
+        <path d="M22 23 L32 20 L32 33 L22 23 Z" fill="white" opacity="0.6"/>
+        <circle cx="32" cy="27" r="3.5" fill="white" opacity="0.4"/>
+        <text x="58" y="42" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="white" letter-spacing="-0.5">Pagly</text>
+        <defs><linearGradient id="g1" x1="0" y1="6" x2="48" y2="54"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs>
+      </svg>
+      <span class="logo-card-label">Fondo oscuro — Principal</span>
+    </div>
+
+    <!-- Light bg -->
+    <div class="logo-card light">
+      <svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="6" width="48" height="48" rx="12" fill="url(#g2)"/>
+        <path d="M15 30 L22 23 L32 33 L22 37 Z" fill="white" opacity="0.9"/>
+        <path d="M22 23 L32 20 L32 33 L22 23 Z" fill="white" opacity="0.6"/>
+        <circle cx="32" cy="27" r="3.5" fill="white" opacity="0.4"/>
+        <text x="58" y="42" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="#102a43" letter-spacing="-0.5">Pagly</text>
+        <defs><linearGradient id="g2" x1="0" y1="6" x2="48" y2="54"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs>
+      </svg>
+      <span class="logo-card-label">Fondo claro</span>
+    </div>
+
+    <!-- Gradient bg -->
+    <div class="logo-card gradient">
+      <svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="6" width="48" height="48" rx="12" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <path d="M15 30 L22 23 L32 33 L22 37 Z" fill="white" opacity="0.9"/>
+        <path d="M22 23 L32 20 L32 33 L22 23 Z" fill="white" opacity="0.7"/>
+        <circle cx="32" cy="27" r="3.5" fill="white" opacity="0.5"/>
+        <text x="58" y="42" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="white" letter-spacing="-0.5">Pagly</text>
+      </svg>
+      <span class="logo-card-label">Sobre gradiente</span>
+    </div>
+
+    <!-- Monochrome -->
+    <div class="logo-card mono">
+      <svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="6" width="48" height="48" rx="12" fill="#1f2937"/>
+        <path d="M15 30 L22 23 L32 33 L22 37 Z" fill="white" opacity="0.9"/>
+        <path d="M22 23 L32 20 L32 33 L22 23 Z" fill="white" opacity="0.6"/>
+        <circle cx="32" cy="27" r="3.5" fill="white" opacity="0.4"/>
+        <text x="58" y="42" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" fill="#1f2937" letter-spacing="-0.5">Pagly</text>
+      </svg>
+      <span class="logo-card-label">Monocromático</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== ICON MARK ==================== -->
+<section>
+  <span class="section-label">02 — Ícono</span>
+  <h2 class="section-title">Marca de Ícono</h2>
+  <p class="section-desc">El ícono puede usarse solo como favicon, ícono de app, o en espacios reducidos. La forma abstracta evoca una flecha de crecimiento con una moneda — representando el crecimiento financiero que Pagly ofrece.</p>
+
+  <div class="icon-grid">
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="url(#ig1)"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="white" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="white" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="white" opacity="0.4"/>
+        <defs><linearGradient id="ig1" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs>
+      </svg>
+      <span>Gradiente</span>
+    </div>
+
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#059669"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="white" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="white" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="white" opacity="0.4"/>
+      </svg>
+      <span>Sólido</span>
+    </div>
+
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#102a43"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="#10b981" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="#10b981" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="#10b981" opacity="0.4"/>
+      </svg>
+      <span>Navy/Green</span>
+    </div>
+
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1f2937"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="white" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="white" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="white" opacity="0.4"/>
+      </svg>
+      <span>Mono oscuro</span>
+    </div>
+
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="#059669" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="#059669" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="#059669" opacity="0.4"/>
+      </svg>
+      <span>Mono claro</span>
+    </div>
+
+    <div class="icon-card">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="32" fill="url(#ig2)"/>
+        <path d="M18 32 L27 24 L40 37 L27 42 Z" fill="white" opacity="0.9"/>
+        <path d="M27 24 L40 20 L40 37 L27 24 Z" fill="white" opacity="0.6"/>
+        <circle cx="40" cy="29" r="4.5" fill="white" opacity="0.4"/>
+        <defs><linearGradient id="ig2" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs>
+      </svg>
+      <span>Circular (social)</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== COLORS ==================== -->
+<section>
+  <span class="section-label">03 — Colores</span>
+  <h2 class="section-title">Paleta de Colores</h2>
+  <p class="section-desc">Una paleta que combina confianza (navy), crecimiento (emerald) y modernidad (teal). Diseñada para interfaces financieras profesionales con personalidad.</p>
+
+  <div class="color-section">
+    <h3>🟢 Primary — Emerald (Acciones, CTA, éxito)</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#ecfdf5"></div><div class="color-info"><div class="color-name">50</div><div class="color-hex">#ecfdf5</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#d1fae5"></div><div class="color-info"><div class="color-name">100</div><div class="color-hex">#d1fae5</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#a7f3d0"></div><div class="color-info"><div class="color-name">200</div><div class="color-hex">#a7f3d0</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#6ee7b7"></div><div class="color-info"><div class="color-name">300</div><div class="color-hex">#6ee7b7</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#34d399"></div><div class="color-info"><div class="color-name">400</div><div class="color-hex">#34d399</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#10b981"></div><div class="color-info"><div class="color-name">500 ★</div><div class="color-hex">#10b981</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#059669"></div><div class="color-info"><div class="color-name">600 — CTA</div><div class="color-hex">#059669</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#047857"></div><div class="color-info"><div class="color-name">700</div><div class="color-hex">#047857</div></div></div>
+    </div>
+  </div>
+
+  <div class="color-section">
+    <h3>🔵 Navy (Fondos, textos, autoridad)</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#f0f4f8"></div><div class="color-info"><div class="color-name">50</div><div class="color-hex">#f0f4f8</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#d9e2ec"></div><div class="color-info"><div class="color-name">100</div><div class="color-hex">#d9e2ec</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#bcccdc"></div><div class="color-info"><div class="color-name">200</div><div class="color-hex">#bcccdc</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#334e68"></div><div class="color-info"><div class="color-name">700</div><div class="color-hex">#334e68</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#243b53"></div><div class="color-info"><div class="color-name">800</div><div class="color-hex">#243b53</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#102a43"></div><div class="color-info"><div class="color-name">900 ★</div><div class="color-hex">#102a43</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#0a1929"></div><div class="color-info"><div class="color-name">950</div><div class="color-hex">#0a1929</div></div></div>
+    </div>
+  </div>
+
+  <div class="color-section">
+    <h3>🎨 Accent — Teal (Highlights, links, elementos secundarios)</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#2dd4bf"></div><div class="color-info"><div class="color-name">400</div><div class="color-hex">#2dd4bf</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#14b8a6"></div><div class="color-info"><div class="color-name">500 ★</div><div class="color-hex">#14b8a6</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#0d9488"></div><div class="color-info"><div class="color-name">600</div><div class="color-hex">#0d9488</div></div></div>
+    </div>
+  </div>
+
+  <div class="color-section">
+    <h3>⚡ Semánticos (Feedback del sistema)</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#22c55e"></div><div class="color-info"><div class="color-name">Success</div><div class="color-hex">#22c55e</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#f59e0b"></div><div class="color-info"><div class="color-name">Warning</div><div class="color-hex">#f59e0b</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#ef4444"></div><div class="color-info"><div class="color-name">Error</div><div class="color-hex">#ef4444</div></div></div>
+      <div class="color-chip"><div class="color-swatch" style="background:#3b82f6"></div><div class="color-info"><div class="color-name">Info</div><div class="color-hex">#3b82f6</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== TYPOGRAPHY ==================== -->
+<section>
+  <span class="section-label">04 — Tipografía</span>
+  <h2 class="section-title">Sistema Tipográfico</h2>
+  <p class="section-desc">Tres familias tipográficas con roles claros. Space Grotesk para impacto, DM Sans para legibilidad, JetBrains Mono para datos.</p>
+
+  <div class="type-specimens">
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-tag">Display / Headings</span>
+        <span class="type-tag">Space Grotesk</span>
+        <span class="type-tag">700 Bold</span>
+      </div>
+      <div class="type-sample display">Pagly transforma<br>tu planilla.</div>
+      <p class="type-note">Usar en títulos, hero sections, estadísticas destacadas y el wordmark del logo. Tracking: -0.02em para tamaños grandes.</p>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-tag">Body / UI</span>
+        <span class="type-tag">DM Sans</span>
+        <span class="type-tag">400–600</span>
+      </div>
+      <div class="type-sample body">Pagly automatiza los cálculos de CSS, Seguro Educativo e ISR para empresas panameñas. Olvídate de hojas de cálculo y reduce errores en tu nómina con un sistema diseñado para cumplir con la Ley 462.</div>
+      <p class="type-note">Tipografía principal para textos, labels, navegación, formularios y contenido general. Excelente legibilidad en pantalla.</p>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-tag">Code / Data</span>
+        <span class="type-tag">JetBrains Mono</span>
+        <span class="type-tag">400–500</span>
+      </div>
+      <div class="type-sample mono">Salario Bruto: B/. 2,500.00<br>CSS (9.75%): - B/. 243.75<br>SE (1.25%): - B/. 31.25<br>ISR: - B/. 45.83<br>────────────────────<br>Neto a Pagar: B/. 2,179.17</div>
+      <p class="type-note">Para montos, tablas numéricas, códigos de empleado, timestamps, y cualquier dato que necesite alineación monoespaciada.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== APP MOCKUP ==================== -->
+<section>
+  <span class="section-label">05 — Aplicación</span>
+  <h2 class="section-title">Preview del Dashboard</h2>
+  <p class="section-desc">Así se ve la identidad visual aplicada al producto. Dark theme como base, con acentos emerald para acciones y datos clave.</p>
+
+  <div class="mockup-container">
+    <div class="mockup-toolbar">
+      <div class="toolbar-dot red"></div>
+      <div class="toolbar-dot yellow"></div>
+      <div class="toolbar-dot green"></div>
+      <span class="toolbar-url">app.pagly.io</span>
+    </div>
+    <div class="mockup-body">
+      <div class="mockup-sidebar">
+        <div class="sidebar-logo">
+          <svg viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="url(#sg)"/><path d="M8 14 L12 10 L18 16 L12 18 Z" fill="white" opacity="0.9"/><path d="M12 10 L18 8 L18 16 L12 10 Z" fill="white" opacity="0.6"/><circle cx="18" cy="12" r="2" fill="white" opacity="0.4"/><defs><linearGradient id="sg" x1="0" y1="0" x2="28" y2="28"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs></svg>
+          <span>Pagly</span>
+        </div>
+        <nav class="sidebar-nav">
+          <div class="nav-item active">
+            <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="11" y="2" width="5" height="5" rx="1"/><rect x="2" y="11" width="5" height="5" rx="1"/><rect x="11" y="11" width="5" height="5" rx="1"/></svg>
+            Dashboard
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="6" r="3"/><path d="M3 16c0-3 2.7-5 6-5s6 2 6 5"/></svg>
+            Empleados
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M2 7h14"/><path d="M6 3v-1"/><path d="M12 3v-1"/></svg>
+            Planillas
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 14l4-4 3 3 7-7"/></svg>
+            Reportes
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="3"/><path d="M9 2v2m0 10v2M2 9h2m10 0h2M4.2 4.2l1.4 1.4m7 7l1.4 1.4M4.2 13.8l1.4-1.4m7-7l1.4-1.4"/></svg>
+            Configuración
+          </div>
+        </nav>
+      </div>
+      <div class="mockup-main">
+        <div class="mockup-header">
+          <h2 class="mockup-title">Dashboard</h2>
+          <button class="mockup-btn">+ Nueva Planilla</button>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-label">Empleados Activos</div>
+            <div class="stat-value">24</div>
+            <div class="stat-change up">↑ +2 este mes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Planilla Actual</div>
+            <div class="stat-value">B/. 48,320</div>
+            <div class="stat-change up">↑ 3.2%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">CSS Patronal</div>
+            <div class="stat-value">B/. 5,919</div>
+            <div class="stat-change down">↑ 3.2%</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Próximo Pago</div>
+            <div class="stat-value">15 Feb</div>
+            <div class="stat-change" style="color: var(--accent-400);">En 9 días</div>
+          </div>
+        </div>
+        <table class="mock-table">
+          <thead>
+            <tr>
+              <th>Empleado</th>
+              <th>Departamento</th>
+              <th>Salario Bruto</th>
+              <th>Neto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color: white; font-weight: 500;">María González</td>
+              <td>Contabilidad</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">B/. 2,800.00</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--primary-400);">B/. 2,385.60</td>
+              <td><span class="badge success">Pagado</span></td>
+            </tr>
+            <tr>
+              <td style="color: white; font-weight: 500;">Carlos Rodríguez</td>
+              <td>Operaciones</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">B/. 1,950.00</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--primary-400);">B/. 1,672.50</td>
+              <td><span class="badge success">Pagado</span></td>
+            </tr>
+            <tr>
+              <td style="color: white; font-weight: 500;">Ana Castillo</td>
+              <td>Ventas</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">B/. 3,200.00</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--primary-400);">B/. 2,688.00</td>
+              <td><span class="badge warning">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td style="color: white; font-weight: 500;">Roberto Méndez</td>
+              <td>IT</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">B/. 2,500.00</td>
+              <td style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--primary-400);">B/. 2,143.75</td>
+              <td><span class="badge info">Calculando</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== USAGE RULES ==================== -->
+<section>
+  <span class="section-label">06 — Reglas de Uso</span>
+  <h2 class="section-title">Do's & Don'ts</h2>
+  <p class="section-desc">Mantén la consistencia de marca siguiendo estas directrices fundamentales.</p>
+
+  <div class="rules-grid">
+    <div class="rule-card do">
+      <div class="rule-label">✓ Hacer</div>
+      <p>Usar el logo sobre fondos oscuros (navy-900+) o fondos claros (white/gray-50) con suficiente contraste.</p>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-label">✗ No Hacer</div>
+      <p>Nunca colocar el logo sobre fondos de colores vibrantes o fotografías sin overlay que reduzcan la legibilidad.</p>
+    </div>
+    <div class="rule-card do">
+      <div class="rule-label">✓ Hacer</div>
+      <p>Usar emerald-600 (#059669) como color principal para botones de acción y CTAs. Navy-900 para backgrounds.</p>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-label">✗ No Hacer</div>
+      <p>No usar más de 3 colores de la paleta primaria simultáneamente. Evitar gradientes excesivos en la UI.</p>
+    </div>
+    <div class="rule-card do">
+      <div class="rule-label">✓ Hacer</div>
+      <p>JetBrains Mono para TODOS los valores monetarios y datos numéricos. Facilita la lectura en tablas financieras.</p>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-label">✗ No Hacer</div>
+      <p>No distorsionar, rotar o agregar efectos al logotipo. No cambiar las proporciones del ícono respecto al wordmark.</p>
+    </div>
+    <div class="rule-card do">
+      <div class="rule-label">✓ Hacer</div>
+      <p>Zona segura del logo: mínimo 1x la altura del ícono alrededor del logotipo completo, sin elementos invasivos.</p>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-label">✗ No Hacer</div>
+      <p>No usar el wordmark "Pagly" en fuentes diferentes a Space Grotesk Bold. La tipografía es parte de la identidad.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== TOKENS REFERENCE ==================== -->
+<section>
+  <span class="section-label">07 — Tokens para Desarrollo</span>
+  <h2 class="section-title">Design Tokens</h2>
+  <p class="section-desc">Referencia rápida para implementar en Tailwind CSS y variables CSS del proyecto.</p>
+
+  <div class="type-specimen" style="background: var(--navy-900); border: 1px solid var(--navy-700); border-radius: 16px; padding: 2rem;">
+    <div class="type-sample mono" style="font-size: 0.8rem; line-height: 2;">
+/* tailwind.config.js */<br>
+colors: {<br>
+&nbsp;&nbsp;primary: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;50: '#ecfdf5', 100: '#d1fae5',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;200: '#a7f3d0', 300: '#6ee7b7',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;400: '#34d399', 500: '#10b981',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;600: '#059669', 700: '#047857',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;800: '#065f46', 900: '#064e3b',<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;navy: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;50: '#f0f4f8', 100: '#d9e2ec',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;200: '#bcccdc', 700: '#334e68',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;800: '#243b53', 900: '#102a43',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;950: '#0a1929',<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;accent: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;400: '#2dd4bf', 500: '#14b8a6',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;600: '#0d9488',<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+fontFamily: {<br>
+&nbsp;&nbsp;display: ['Space Grotesk', 'sans-serif'],<br>
+&nbsp;&nbsp;body: ['DM Sans', 'sans-serif'],<br>
+&nbsp;&nbsp;mono: ['JetBrains Mono', 'monospace'],<br>
+}<br><br>
+borderRadius: {<br>
+&nbsp;&nbsp;sm: '4px', md: '8px',<br>
+&nbsp;&nbsp;lg: '12px', xl: '16px',<br>
+}
+    </div>
+  </div>
+</section>
+
+<footer class="brand-footer">
+  <p><strong>Pagly</strong> — Planilla inteligente para Panamá</p>
+  <p style="margin-top: 0.5rem;">Brand Identity Guide v1.0 · Febrero 2026</p>
+</footer>
+
+</body>
+</html>
